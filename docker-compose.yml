@@ -1,0 +1,12 @@
+version: '2'
+services:
+  kafka:
+    image: ${KAFKA_IMAGE}
+    ports:
+      - ${KAFKA_PORT}:9092
+      - ${ZOOKEEPER_PORT}:2181
+    environment:
+      ADVERTISED_PORT: ${KAFKA_PORT}
+      ADVERTISED_HOST: ${HOST_IP}
+  cassandra:
+    image: ${CASSANDRA_IMAGE}
