@@ -1,7 +1,7 @@
 version: '2'
 services:
   kafka:
-    image: ${KAFKA_IMAGE}
+    build: ./kafka/.
     ports:
       - ${KAFKA_PORT}:9092
       - ${ZOOKEEPER_PORT}:2181
