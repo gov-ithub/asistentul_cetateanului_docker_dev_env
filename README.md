@@ -2,6 +2,12 @@
 
 ## Docker Development environment
 
+### Initial build
+
+To set up the Postgres user password, at first run you need to give the desired password to the compose command as an environment variable
+    
+    POSTGRES_PASSWORD=mytestpwd ./compose.sh up
+
 ### How to use? 
 
 Create and start all docker containers (configured in _docker-compose.yml_)

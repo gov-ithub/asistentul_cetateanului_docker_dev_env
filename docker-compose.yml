@@ -8,5 +8,9 @@ services:
     environment:
       ADVERTISED_PORT: ${KAFKA_PORT}
       ADVERTISED_HOST: ${HOST_IP}
-  cassandra:
-    image: ${CASSANDRA_IMAGE}
+      ZOOKEEPER_IP: ${HOST_IP}
+      KAFKA_ADVERTISED_HOST_NAME: ${HOST_IP}
+  postgres:
+    image: ${POSTGRES_IMAGE}
+    ports:
+      - ${POSTGRES_PORT}:5432
