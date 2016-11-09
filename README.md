@@ -4,9 +4,9 @@
 
 ### Initial build
 
-To set up the Postgres user password, at first run you need to give the desired password to the compose command as an environment variable
+To set up the Postgres user password, at first run you need to rename settings.env.dist to settings.env, then
     
-    POSTGRES_PASSWORD=mytestpwd ./compose.sh up
+    ./compose.sh up
 
 ### How to use? 
 
