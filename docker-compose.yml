@@ -13,5 +13,11 @@ services:
     environment:
       ZOOKEEPER_IP: ${HOST_IP}
       KAFKA_ADVERTISED_HOST_NAME: ${HOST_IP}
-  cassandra:
-    image: ${CASSANDRA_IMAGE}
+  postgres:
+    image: ${POSTGRES_IMAGE}
+    ports:
+      - ${POSTGRES_PORT}:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}

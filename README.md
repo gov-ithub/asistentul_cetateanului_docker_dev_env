@@ -2,6 +2,12 @@
 
 ## Docker Development environment
 
+### Initial build
+
+To set up the Postgres user password, at first run you need to rename settings.env.dist to settings.env, then
+    
+    ./compose.sh up
+
 ### How to use? 
 
 Create and start all docker containers (configured in _docker-compose.yml_)
